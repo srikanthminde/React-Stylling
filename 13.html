@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    </head>
+    <body id="root">
+        <script type=text/babel>
+        
+      var  Abc=function(){
+            var [x,setX]=React.useState(["srikanth"])
+            return(
+                    <div>
+                       {
+                        x.map((m)=>{
+                            return <h1 style={m.length%2===0?{color:"green"}:{color:"red"}}>{m}</h1>
+                        })
+                       }
+                        
+                    </div>
+            )
+        }
+            ReactDOM.render(<Abc/>,document.getElementById("root"))
+        </script>
+    </body>
+</html>
